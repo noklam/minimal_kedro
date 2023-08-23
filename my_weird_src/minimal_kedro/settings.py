@@ -19,13 +19,16 @@ https://kedro.readthedocs.io/en/stable/kedro_project_setup/settings.html."""
 # }
 
 # Directory that holds configuration.
-# CONF_SOURCE = "conf"
+CONF_SOURCE = "."
 
 # Class that manages how configuration is loaded.
 # from kedro.config import OmegaConfigLoader
 # CONFIG_LOADER_CLASS = OmegaConfigLoader
 # Keyword arguments to pass to the `CONFIG_LOADER_CLASS` constructor.
-# CONFIG_LOADER_ARGS = {
+CONFIG_LOADER_ARGS = {
+    "base_env": ".",
+    "default_run_env": ".",
+}
 #       "config_patterns": {
 #           "spark" : ["spark*/"],
 #           "parameters": ["parameters*", "parameters*/**", "**/parameters*"],
