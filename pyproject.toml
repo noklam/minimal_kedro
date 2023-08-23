@@ -2,6 +2,7 @@
 package_name = "minimal_kedro"
 project_name = "minimal_kedro"
 kedro_init_version = "0.18.12"
+source_dir = "my_weird_src"
 
 [tool.isort]
 profile = "black"
