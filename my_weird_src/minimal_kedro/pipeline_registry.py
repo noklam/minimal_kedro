@@ -1,7 +1,7 @@
 """Project pipelines."""
 from typing import Dict
 
-from kedro.framework.project import find_pipelines
+from .my_weird_pipeline import create_pipeline
 from kedro.pipeline import Pipeline
 
 
@@ -11,6 +11,6 @@ def register_pipelines() -> Dict[str, Pipeline]:
     Returns:
         A mapping from pipeline names to ``Pipeline`` objects.
     """
-    pipelines = find_pipelines()
-    pipelines["__default__"] = sum(pipelines.values())
+    pipelines = {}
+    pipelines["__default__"] = create_pipeline()
     return pipelines
